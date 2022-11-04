@@ -2,8 +2,7 @@
 
 #_________________________________________________________________________________________________________
 
-# Este programa Ejecuta el modelo basado en Multi-head attention para LID  con ALLOSAURUS
-# este usa el wordpiece tokenizer de hugging face
+# This code implements the entire transformer architecture, and  sliding attention windows
 
 #___________________________________________________________________________________________________________
 
