@@ -1,7 +1,7 @@
 
 #__________________________________________________________________________________________________
 
-# Este programa importa la base de datos de KALAKA-3 para que sea usada por el modelo de Attention
+# This code load the entire database and the sub unit tokenizers
 
 #___________________________________________________________________________________________________
 
@@ -39,7 +39,7 @@ labels_eval = np.load(r'C:\Users\ASUS\Desktop\David\Proyectos\Reconocimiento de 
 
 #Funciones ---------------------------------------------
 
-# Esta funcion crea listas de los fonemas 
+# This load the data
 
 def create_dataset(parent_dir):
 
@@ -114,7 +114,7 @@ def create_dataset(parent_dir):
 
 
 
-# Funcion para Tokenizar cada unidad ---------------------------------------------------------
+# Function for tokenization ---------------------------------------------------------
 
 def tokenize(lang,names_tokenizer):
 
@@ -157,7 +157,7 @@ def tokenize(lang,names_tokenizer):
 
 
 
-# Funcion principal -----------------------------------------------------------------------------
+# Main function -----------------------------------------------------------------------------
 
 def load_dataset(path):
 
