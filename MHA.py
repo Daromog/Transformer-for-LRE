@@ -2,14 +2,14 @@
 
 #_________________________________________________________________________________________________________
 
-# This code implements the entire transformer architecture, and  sliding attention windows
+# This code implements the entire transformer architecture with  sliding attention windows
 
 #___________________________________________________________________________________________________________
 
 
 
 
-#Librerias ---------------------------
+#Librariess ---------------------------
 
 import Load_Database
 import tensorflow as tf
@@ -27,7 +27,7 @@ TF_ENABLE_GPU_GARBAGE_COLLECTION=False
 
 
 
-# Se importa la base de datos ------
+# Database ------
 
 print()
 print()
@@ -39,7 +39,7 @@ input_tensor_train,labels_train,input_tensor_dev,labels_dev,input_tensor_ev,labe
 
 
 
-# Parametros del modelo -------
+# Model Parameters -------
 
 Save_Prob=13
 
@@ -56,7 +56,7 @@ num_heads = 1
 dropout_rate = 0.4
 
 
-# Se realiza el batch y el shuffle para la base de datos ------
+# Batch and Shuffle ------
 
 print()
 print("Vocab Size")
@@ -76,7 +76,7 @@ print()
 
 
 
-# Se crea los paths y summaries para guardar y graficar el modelo------
+# TF summaries------
 
 current_time=datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 train_log_dir='logs/gradient_tape/' + current_time + '/train'
@@ -152,8 +152,7 @@ def create_padding_mask(seq,window,size,init_zeros):
 
 	#.....
 
-	# add extra dimensions to add the padding
-	# to the attention logits
+	# add extra dimensions to add the padding to the attention logits
 	return padding_window[:,tf.newaxis,:,:], seq_2 #(batch_size, 1, size, size)
 
 
