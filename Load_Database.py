@@ -8,7 +8,7 @@
 
 
 
-# Librerias --------------------------------------------
+# Libraries --------------------------------------------
 
 import tensorflow as tf
 import os
@@ -24,7 +24,7 @@ from tokenizers.processors import TemplateProcessing
 
 
 
-# Se importan los nombres y los labels de la base de datos original---------------------------
+# Import---------------------------
 
 names_train=np.load(r'C:\Users\ASUS\Desktop\David\Proyectos\Reconocimiento de Idioma con Transformers\Sistema Fonotactico\Names_Labels\names_train.npy')
 names_dev = np.load(r'C:\Users\ASUS\Desktop\David\Proyectos\Reconocimiento de Idioma con Transformers\Sistema Fonotactico\Names_Labels\names_dev.npy')
@@ -37,7 +37,7 @@ labels_eval = np.load(r'C:\Users\ASUS\Desktop\David\Proyectos\Reconocimiento de 
 
 
 
-#Funciones ---------------------------------------------
+#Functions ---------------------------------------------
 
 # This load the data
 
@@ -205,7 +205,6 @@ def load_dataset(path):
 	print('')
 
 
-    #Se transforma los labels a formato int
 	labels_t=[]
 	labels_d=[]
 	labels_e=[]
